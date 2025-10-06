@@ -45,11 +45,12 @@ npm install
 
 ```env
 PORT=3000
-MONGO_URI=mongodb://mongo:27017/orders_db
-REDIS_URL=redis://redis:6379
+MONGO_URI=mongodb://mongo:27017/ordersdb
+REDIS_HOST=redis
+REDIS_PORT=6379
+RABBITMQ_URL=amqp://rabbitmq
 MAIL=youremail@gmail.com
 MAIL_PASSWORD=yourpassword
-RABBITMQ_URL=amqp://rabbitmq:5672
 ```
 
 ---
