@@ -110,6 +110,6 @@ Response: 200 OK
 
 ## RabbitMQ Email Integration
 
-- When a new order is created, the server publishes an `order_created` message to RabbitMQ.
-- A worker service listens to the queue and sends a confirmation email to the customer asynchronously.
-- This ensures that the API responds quickly and email sending does not block the request.
+- When a new order is created, the server publishes an `order_created` message to a RabbitMQ queue.
+- A separate worker service (consumer) listens to this queue and sends a confirmation email to the customer asynchronously.
+- This ensures that the API responds immediately, while email delivery happens in the background without blocking the request.
